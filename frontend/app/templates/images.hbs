@@ -1,0 +1,11 @@
+<ul>
+  {{#each image in model}}
+  <li>
+    {{#link-to "images.show" image}}
+      <img {{bind-attr src="image.url"}}>
+    {{/link-to}}
+  </li>
+  {{/each}}
+</ul>
+
+{{outlet}}

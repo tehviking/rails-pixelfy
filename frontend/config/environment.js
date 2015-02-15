@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'frontend',
+    modulePrefix: 'pixelfy-me',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -11,6 +11,15 @@ module.exports = function(environment) {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
+    },
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self'",
+      'connect-src': "'self'",
+      'img-src': "'self' data: www.gravatar.com",
+      'style-src': "'self'",
+      'media-src': "'self'"
     },
 
     APP: {

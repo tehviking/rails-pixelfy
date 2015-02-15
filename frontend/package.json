@@ -12,7 +12,6 @@
     "build": "ember build",
     "test": "ember test",
     "postinstall": "../../node_modules/bower/bin/bower install"
-  }
   },
   "repository": "",
   "engines": {

@@ -9,6 +9,7 @@ gem 'rails', '4.2.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'active_model_serializers', '~> 0.8.1'
 gem 'ember-cli-rails'
+gem "non-stupid-digest-assets"
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc

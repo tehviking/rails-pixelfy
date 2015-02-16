@@ -1,11 +1,18 @@
-<ul>
-  {{#each image in model}}
-  <li>
-    {{#link-to "images.show" image}}
-      <img {{bind-attr src="image.url"}}>
-    {{/link-to}}
-  </li>
-  {{/each}}
-</ul>
+<h3>Select an image</h3>
 
-{{outlet}}
+<div class="row">
+  <div class="col-md-4">
+    <ul class="image-gallery">
+      {{#each image in model}}
+        <li>
+          {{#link-to "images.show" image}}
+            <img class="gallery-image" {{bind-attr src="image.url"}}>
+          {{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-md-8">
+    {{outlet}}
+  </div>
+</div>

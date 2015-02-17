@@ -1,10 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function(params) {
-    return this.modelFor("images").findBy("id", params.id);
-  },
-
   actions: {
     downloadImage: function() {
       var link = document.createElement("a");
@@ -14,5 +10,4 @@ export default Ember.Route.extend({
       link.click();
     }
   }
-
 });

@@ -15,10 +15,10 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'default-src': "'none'",
       'script-src': "'self'",
-      'font-src': "'self'",
+      'font-src': "'self' fonts.gstatic.com",
       'connect-src': "'self'",
-      'img-src': "'self' data: www.gravatar.com",
-      'style-src': "'self'",
+      'img-src': "'self' data: www.gravatar.com gravatar.com",
+      'style-src': "'self' fonts.googleapis.com",
       'media-src': "'self'"
     },
 

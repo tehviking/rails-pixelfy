@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
+var ImagesShowRoute = Ember.Route.extend({
   model: function(params) {
     return this.modelFor("images").findBy("id", params.id);
   },
@@ -14,5 +14,6 @@ export default Ember.Route.extend({
       link.click();
     }
   }
-
 });
+
+export default ImagesShowRoute;

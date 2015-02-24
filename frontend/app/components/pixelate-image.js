@@ -1,17 +1,15 @@
-/*global Pixelate */
-
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+var PixelateImageComponent = Ember.Component.extend({
   value: 0,
 
   performPixelation: Ember.observer("value", function() {
     var amount = this.get("value") / 100;
-      if(!this.pixelate) {
-        this.pixelate = new Pixelate(this.$("img").get(0), {amount: amount});
-      } else {
-        this.pixelate.setAmount(amount).render();
-      }
+    if(!this.pixelate) {
+      this.pixelate = new Pixelate(this.$("img").get(0), {amount: amount});
+    } else {
+      this.pixelate.setAmount(amount).render();
+    }
   }).on("didInsertElement"),
 
   rerenderOnSrcChange: Ember.observer("src", function() {
@@ -22,3 +20,5 @@ export default Ember.Component.extend({
     }, 100);
   })
 });
+
+export default PixelateImageComponent;

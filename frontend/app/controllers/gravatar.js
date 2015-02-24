@@ -1,10 +1,10 @@
 import Ember from 'ember';
+import gravatarUrlFromEmail from '../utils/gravatar-url-from-email';
 
-export default Ember.Controller.extend({
+var GravatarController = Ember.Controller.extend({
   gravatarEmail: "",
   gravatarUrl: Ember.computed("gravatarEmail", function() {
-    var hash = md5(this.get("gravatarEmail").trim().toLowerCase());
-    return `http://gravatar.com/avatar/${hash}?s=400`;
+    return gravatarUrlFromEmail(this.get("gravatarEmail"), 400);
   }),
 
   createBlobUrl: function() {
@@ -40,3 +40,5 @@ export default Ember.Controller.extend({
   }
 
 });
+
+export default GravatarController;

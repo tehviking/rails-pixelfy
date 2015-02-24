@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
+var GravatarRoute = Ember.Route.extend({
   actions: {
     downloadImage: function() {
       var link = document.createElement("a");
@@ -11,3 +11,5 @@ export default Ember.Route.extend({
     }
   }
 });
+
+export default GravatarRoute;

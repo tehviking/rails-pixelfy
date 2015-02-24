@@ -1,6 +1,6 @@
 import Image from '../models/image';
 
-export default function imageData(id) {
+var imageData = function (id) {
   var images = {
     "1": {
       id: "1",
@@ -43,4 +43,6 @@ export default function imageData(id) {
     });
     return imagesArray;
   }
-}
+};
+
+export default imageData;
